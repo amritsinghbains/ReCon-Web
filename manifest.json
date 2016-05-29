@@ -1,6 +1,6 @@
 {
   "name": "ReCon Web",
-  "description": "ReCon analyzes your network traffic to tell if personal information is being transmitted, and it doesn't even need to know what is your personal information to work.",
+  "description": "ReCon analyzes your network traffic to tell if personal information is being transmitted, and calculates a leakiness score.",
   "version": "0.0.1",
   "background": {
     "persistent": false,
@@ -13,6 +13,9 @@
     "default_popup": "popup/popup.html"
   },
 
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
   "permissions": [
     "http://domain/getjson*",
     "http://api.ipify.org/*",
