@@ -1,5 +1,6 @@
+var superStorage = '';
 chrome.devtools.panels.create(
-    'Network Filter',
+    'ReCon Web',
     null, // No icon path
     'Panel/NetworkFilterPanel.html',
     null // no callback needed

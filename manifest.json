@@ -1,11 +1,27 @@
 {
-  "name": "Filter Network",
-  "version": "0.1",
-  "description": "Filter req/res by body content",
+  "name": "ReCon Web",
+  "description": "ReCon analyzes your network traffic to tell if personal information is being transmitted, and it doesn't even need to know what is your personal information to work.",
+  "version": "0.0.1",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
   "devtools_page": "index.html",
-  "permissions": ["http://domain/getjson*"],
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup/popup.html"
+  },
+
+  "permissions": [
+    "http://domain/getjson*",
+    "http://api.ipify.org/*",
+    "https://recon-node.herokuapp.com/*",
+    "tabs",
+    "activeTab"
+  ],
   "manifest_version": 2,
-   "content_security_policy": "default-src 'self'  chrome-extension-resource: ; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval';  connect-src *; frame-src *;",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "web_accessible_resources":
     [
       "*"

@@ -30,3 +30,7 @@ pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
 span.hl{
   background-color:#FF9;
 }
+
+.hidden {
+    display: none;
+}

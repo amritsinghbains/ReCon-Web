@@ -1,24 +1,159 @@
 <html>
 <head>
   <link rel='stylesheet' href='main.css'>
+<!--Import Google Icon Font-->
+      <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+
+
 </head>
 <body>
+  <div class="hidden">
+    <button class='get-network'>Get Network</button>
+    <input type=text id='filterByContent' placeholder='Filter Entries By Content'>
+    <input type=text id='filterByOtherInfo' placeholder='Filter By Other Info'>
+    <input type="number" id="min" min="0"  placeholder='Min Body Size'>
+    <input type="number" id="max" min="0"  placeholder='Max Body Size'>
+    <input type=checkbox id=pretty>
+    <label for=pretty>Pretty response body</label>
+    <input type=checkbox id=highlight checked>
+    <label for=highlight>Highlight search results</label>
+    <input type=checkbox id=selectAll checked>
+    <label for=selectAll>Select All response body on click</label><br>
+    <h2 class='newspaper' align="bottom">Network requests and responses</h2>
+  </div>
 
-  <button class='get-network'>Get Network</button>
-  <input type=text id='filterByContent' placeholder='Filter Entries By Content'>
-  <input type=text id='filterByOtherInfo' placeholder='Filter By Other Info'>
-  <input type="number" id="min" min="0"  placeholder='Min Body Size'>
-  <input type="number" id="max" min="0"  placeholder='Max Body Size'>
-  <input type=checkbox id=pretty>
-  <label for=pretty>Pretty response body</label>
-  <input type=checkbox id=highlight checked>
-  <label for=highlight>Highlight search results</label>
-  <input type=checkbox id=selectAll checked>
-  <label for=selectAll>Select All response body on click</label><br>
-  <h2 class='newspaper' align="bottom">Network requests and responses</h2>
+
+  <nav style="background: #320142" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="" class="brand-logo" >ReCon Web</a>
+    <ul class="right">
+        <li><a id="logo-container" href="http://recon.meddle.mobi/" target="_blank">About</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+
+    <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel white">
+
+            <img id="favicon" height="50px" width="50px"/>
+            <h5 class="card-title activator grey-text text-darken-4" id="host">host</h5>
+            <h6 class="card-title activator grey-text text-darken-4" id="parent_domain">parent_domain</h6>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m8">
+          <div class="card-panel white">
+          <table>
+            
+            <tr>
+            <td width="30px">
+              <h6 class="card-title activator grey-text text-darken-4" id="leakinessText">Leakiness: </h6>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="leakinessCount">-</h6>
+            </td>
+            </tr>
+
+            <tr>
+            <td width="30px">
+              <h6 class="card-title activator grey-text text-darken-4" id="subDomainCount">-</h6>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="subDomainText">Sub Domain(s)</h6>
+            </td>
+            </tr>
+
+            <tr>
+            <td width="30px">
+              <h6 class="card-title activator grey-text text-darken-4" id="externalDomainCount">-</h6>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="externalDomainText">External Domain(s)</h6>
+            </td>
+            </tr>
+
+           
+
+            <tr>
+            <td width="30px">
+              <img id="usernameIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="usernameText">Username</h6>
+            </td>
+            </tr>
+            <tr>
+            <td width="30px">
+              <img id="nameIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="nameText">Name</h6>
+            </td>
+            </tr>
+            <tr>
+            <td width="30px">
+              <img id="idIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="idText">ID</h6>
+            </td>
+            </tr>
+            <tr>
+            <td width="30px">
+              <img id="locationIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="locationText">Location</h6>
+            </td>
+            </tr>
+            <tr>
+            <td width="30px">
+              <img id="genderIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="genderText">Gender</h6>
+            </td>
+            </tr>
+            <tr>
+            <td width="30px">
+              <img id="contactIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="contactText">Contact</h6>
+            </td>
+            </tr>
+            <tr>
+            <td width="30px">
+              <img id="passwordIcon" src="images/notchecked.png" height="20px" width="20px" style="float: left; width: 20px; height: 20px"/>
+            </td>
+            <td>
+              <h6 class="card-title activator grey-text text-darken-4" id="passwordText">Password</h6>
+            </td>
+            </tr>
+
+            </table>
+          </div>
+        </div>
+    </div>
+      
+    </div>
+  </div>
+
+
+
+
   <ol class='newspaper network-entries'>
-      <li>Click Get Network Button to get network req/res</li>
+      <li>Use the website to load up data</li>
   </ol>
   <script src="NetworkFilter.js"></script>
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="materialize.min.js"></script>
 </body>
 </html>
