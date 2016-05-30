@@ -1,22 +1,13 @@
-# network-filter
-Network filter tab for chrome devtools.
+# ReCon Web
 
-![image](https://cloud.githubusercontent.com/assets/39191/13127005/ffd46afa-d581-11e5-8bd2-aa4c1301be05.png)
+# Why run ReCon?
+Have you ever wondered who or what is tracking you and/or stealing your personal information? Unfortunately, your mobile devices currently give you little or no way to tell if this is the case. Even if they did, they don't give you any way to control it except to decline to install an app. With ReCon, we give you a way to see how your personal information is transmitted to other parties, and allow you to block or modify it with fine granularity. A demo is available here and you can learn more details in this tutorial.
 
+# What does ReCon do?
+ReCon analyzes your network traffic to tell if personal information is being transmitted, and it doesn't even need to know what is your personal information to work. It detects device/user identifiers used in tracking, geolocation leaks, unsafe password transmissions, and personal information such as name, address, gender, and relationship status. We make this information available to you via a private Web page, and allow you to tell us if we found important leaks, and whether we should block or modify them. Check out our services page to get more details.
 
-##  The problem:
-You're receiving a large number of network responses but you only want to to examine one.
-Chrome doesn't let you filter network responses by text content so you end up wasting time looking at many to find the one you want.
+# Screenshots
 
-##  The solution:
-Network filter adds a new devtools tab that allows you to filter network responses by text content.
-Time saved!
-
-##  Installation:
-Clone or download this repo.
-Drag and drop the folder onto your chrome extensions page (chrome://extensions).
-
-##  Usage:
-Open chrome devtools and you will see a new tab called network filter.
-Go to it and click "get network" in the top left. This will get all network requests/responses since devtools was opened.
-Type in the filter text input to find the network response you're looking for.
+![Alt text](/screenshot1.png "Screenshot 1")
+![Alt text](/screenshot2.png "Screenshot 2")
+![Alt text](/screenshot3.png "Screenshot 3")
