@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReCon Web</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/popup.js"></script>
+
+  </head>
+  <body>
+
+    <nav style="background: #320142" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="" class="brand-logo" >ReCon Web</a>
+      <ul class="right">
+          <li><a id="logo-container" href="http://recon.meddle.mobi/" target="_blank">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h4 style="float: left; width: 50%">
+      Current Tab Open
+    </h4>
+    <a class="waves-effect waves-light btn" id="reglink" style="background: #320142; float: left; text-align: left;     margin-top: 10px;">
+      Register
+    </a>
+
+    <div class="preloader-wrapper small active" style="margin:10px; display: none;" id="loaderButton">
+      <div class="spinner-layer " style="border:#320142">
+        <div class="circle-clipper left" style="border:#320142">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <img src="tick.png" height="30px" width="30px" style="margin: 10px; display: none;" id="tickButton">      
+
+    <div style="clear:both;" ></div>
+    <ul id="tabs" class="collection" style="border: none;">
+    </ul>
+    <h4>
+      Currently Analysing Web
+    </h4>
+    <ul id="currenttab" class="collection" style="border: none;">
+        </ul> 
+    <!-- <ul id="tabs" class="list-group"></ul> -->
+
+    
+
+    <center>ReCon &copy; 2016</center>
+
+   
+
+  </body>
+</html>
