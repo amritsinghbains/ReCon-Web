@@ -280,7 +280,7 @@
   }
 
   setInterval(function(){ 
-    // getNetwork(); 
+    getNetwork(); 
   }, 2000);
   
   window.addEventListener('load', listen);
@@ -295,7 +295,7 @@
       type: "POST", //or GET
       url: 'https://recon-node.herokuapp.com/websiteandleakiness',
       data: {
-        website: superData[3],
+        website: superData[2],
         leakiness: superLeakiness
       },
       crossDomain:true,
