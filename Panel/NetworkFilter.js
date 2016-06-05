@@ -12,6 +12,7 @@
   var genderCount = 0;
   var contactCount = 0;
   var passwordCount = 0;
+  var superLeakiness = 0; 
 
   var type2max_points = {
       'username': 100,
@@ -54,6 +55,7 @@
     leakiness += smallerBetweenTwo(passwordCount*type2points_per_leak.password, type2max_points.password);
 
     $('#leakinessCount').text(leakiness);
+    superLeakiness = leakiness;
 
   }
 
@@ -194,24 +196,24 @@
         // console.log(data)
         $.ajax({
           type: "GET", //or GET
-          url: 'https://recon-node.herokuapp.com/get?ip=' + data ,
+          url: 'https://recon-node.herokuapp.com/getwebsitefromip?ip=' + data ,
           
           crossDomain:true,
           cache:false,
           async:false,
           success: function(data){
-              // console.log('saved on server') 
               // alert('Saved on server')
               // data = data.replace(/%22/g, " ");
               data = JSON.parse(data)
-              superData = data;
-              $('#favicon').attr('src', data[0])
-              $('#host').text(data[1])
-              $('#parent_domain').text(data[2])
+              // console.log(data) 
+              superData[0] = data[0];
+              superData[1] = data[1];
+              superData[2] = data[2];
+              $('#favicon').attr('src', superData[0])
+              $('#host').text(superData[1])
+              $('#parent_domain').text(superData[2])
 
-              superDataAnalysis = parseURL(data[2]);
-              
-
+              superDataAnalysis = parseURL(superData[2]);
               
          }
         });
@@ -278,10 +280,33 @@
   }
 
   setInterval(function(){ 
-    getNetwork(); 
+    // getNetwork(); 
   }, 2000);
   
   window.addEventListener('load', listen);
+    console.log('sdsdf22')
+
+  document.getElementById('submitLeakiness').onclick = function () {
+    console.log('sdsdf')
+    // if(superLeakiness == 0){
+    //   return 1;
+    // }
+    $.ajax({
+      type: "POST", //or GET
+      url: 'https://recon-node.herokuapp.com/websiteandleakiness',
+      data: {
+        website: superData[3],
+        leakiness: superLeakiness
+      },
+      crossDomain:true,
+      cache:false,
+      async:false,
+      success: function(data){
+                        
+     }
+    });
+
+  }
 
   function createRow(entry, index) {
     var li = document.createElement('li');
