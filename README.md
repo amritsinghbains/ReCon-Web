@@ -16,11 +16,12 @@ http://recon.meddle.mobi/
 ![Alt text](/screenshots/s1.png "Screenshot 1")
 # Register the website using the current tab
 ![Alt text](/screenshots/s2.png "Screenshot 2")
-# Help ReCon to analyse this website(if it is a new website)
+# Help ReCon to analyse this website
 ![Alt text](/screenshots/s3.png "Screenshot 3")
 # Browse the website and leakiness is calculated
 ![Alt text](/screenshots/s4.png "Screenshot 4")
 # Submit the Leakiness Score to the system
 ![Alt text](/screenshots/s5.png "Screenshot 5")
-# Next time anyone comes of this website, an aggregated score is given to this website
+# Next time anyone opens this website
+# An Aggregated Leakiness Score is given to this website
 ![Alt text](/screenshots/s6.png "Screenshot 6")
