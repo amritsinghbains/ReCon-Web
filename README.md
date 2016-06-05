@@ -8,6 +8,15 @@ ReCon analyzes your network traffic to tell if personal information is being tra
 
 # Screenshots
 
-![Alt text](/screenshot1.png "Screenshot 1")
-![Alt text](/screenshot2.png "Screenshot 2")
-![Alt text](/screenshot3.png "Screenshot 3")
+# Go to any website
+![Alt text](/screenshot/s1.png "Screenshot 1")
+# Register the website using the current tab
+![Alt text](/screenshot/s2.png "Screenshot 2")
+# Help ReCon to analyse this website(if it is a new website)
+![Alt text](/screenshot/s3.png "Screenshot 3")
+# Browse the website and leakiness is calculated
+![Alt text](/screenshot/s4.png "Screenshot 4")
+# Submit the Leakiness Score to the system
+![Alt text](/screenshot/s5.png "Screenshot 5")
+# Next time anyone comes of this website, an aggregated score is given to this website
+![Alt text](/screenshot/s6.png "Screenshot 6")
