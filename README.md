@@ -23,5 +23,5 @@ http://recon.meddle.mobi/
 # Submit the Leakiness Score to the system
 ![Alt text](/screenshots/s5.png "Screenshot 5")
 # Next time anyone opens this website
-# An Aggregated Leakiness Score is given to this website
+# An Aggregated Leakiness Score is provided
 ![Alt text](/screenshots/s6.png "Screenshot 6")
