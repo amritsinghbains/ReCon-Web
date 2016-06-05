@@ -13,14 +13,14 @@ http://recon.meddle.mobi/
 # Screenshots
 
 # Go to any website
-![Alt text](/screenshot/s1.png "Screenshot 1")
+![Alt text](/screenshots/s1.png "Screenshot 1")
 # Register the website using the current tab
-![Alt text](/screenshot/s2.png "Screenshot 2")
+![Alt text](/screenshots/s2.png "Screenshot 2")
 # Help ReCon to analyse this website(if it is a new website)
-![Alt text](/screenshot/s3.png "Screenshot 3")
+![Alt text](/screenshots/s3.png "Screenshot 3")
 # Browse the website and leakiness is calculated
-![Alt text](/screenshot/s4.png "Screenshot 4")
+![Alt text](/screenshots/s4.png "Screenshot 4")
 # Submit the Leakiness Score to the system
-![Alt text](/screenshot/s5.png "Screenshot 5")
+![Alt text](/screenshots/s5.png "Screenshot 5")
 # Next time anyone comes of this website, an aggregated score is given to this website
-![Alt text](/screenshot/s6.png "Screenshot 6")
+![Alt text](/screenshots/s6.png "Screenshot 6")
