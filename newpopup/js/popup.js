@@ -132,6 +132,7 @@ function create_tab_link(tab){
     add_close_button(li, tab.id);
 
     ul.append(li);
+    fetchNumberForCurrentTab();
   }
 }
 
@@ -237,6 +238,26 @@ function registerCallOnServer(value, website){
   });
 }
 
+function fetchNumberForCurrentTab() {
+  // chrome.browserAction.setBadgeText({text: ""});  
+  $.ajax({
+          type: "GET", //or GET
+          url: 'https://recon-node.herokuapp.com/getleakinessfromwebsite?website=' + current_tab[0].url,
+          crossDomain:true,
+          cache:false,
+          async:false,
+          success: function(data){
+            // alert(current_tab[0].url)
+            // alert(data == null)
+            if(data == null){
+              chrome.browserAction.setBadgeText({text: ""});
+            }else{
+              chrome.browserAction.setBadgeText({text: parseInt(data) + ""});            
+            }
+         }
+        });
+}
+
 $(document).ready(function(){
   chrome.tabs.query({
     currentWindow: true
@@ -267,5 +288,7 @@ $(document).ready(function(){
     });
 
     update_total_tabs_count();
+
+    // fetchNumberForCurrentTab();
   });
 });
